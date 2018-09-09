@@ -1,0 +1,5 @@
+gensim
+sklearn
+pandas
+numpy
+dill
