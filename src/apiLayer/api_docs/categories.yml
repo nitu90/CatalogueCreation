@@ -1,0 +1,39 @@
+tags:
+    -   Category API
+parameters:
+    -   name: categoryName
+        in: path
+        type: string
+        required: false
+        description: Fetch category(s) by name
+    -   name: level
+        in: path
+        type: string
+        required: false
+        description: Fetch category(s) at a given level
+    -   name: parentId
+        in: path
+        type: string
+        required: false
+        description: Fetch category(s) by parent's Id
+    -   name: id
+        in: path
+        type: string
+        required: false
+        description: Fetch category by id
+    -   name: usedForModel
+        in: path
+        type: boolean
+        required: false
+        description: If True, returns only those categories which are used for modelling. If False, returns others.
+    -   name: creatorType
+        in: path
+        type: string
+        required: false
+        enum: ['auto','manual']
+        description: Fetch category(s) by creatorType, ie. manual vs auto(from websites)
+    -   name: creatorName
+        in: path
+        type: string
+        required: false
+        description: Fetch category(s) by person who created it
