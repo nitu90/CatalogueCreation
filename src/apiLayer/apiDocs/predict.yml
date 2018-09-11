@@ -1,0 +1,16 @@
+Predict Product Category
+---
+tags:
+    -   Category Prediction API
+parameters:
+    -   name: skus
+        in: body
+        type: array
+        required: true
+        description: List of skus
+    -   name: level
+        in: path
+        type: string
+        required: false
+        enum: ['level1']
+        description: If level parameter is passed, it will return predictions at only that level, else at all levels
