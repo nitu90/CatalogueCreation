@@ -1,7 +1,9 @@
+Fetch one/more category(s) based on below mentioned params
+---
 tags:
     -   Category API
 parameters:
-    -   name: categoryName
+    -   name: name
         in: path
         type: string
         required: false
@@ -10,6 +12,7 @@ parameters:
         in: path
         type: string
         required: false
+        enum: ['level1','level2','level3']
         description: Fetch category(s) at a given level
     -   name: parentId
         in: path
@@ -23,9 +26,10 @@ parameters:
         description: Fetch category by id
     -   name: usedForModel
         in: path
-        type: boolean
+        type: integer
         required: false
-        description: If True, returns only those categories which are used for modelling. If False, returns others.
+        enum: [0,1]
+        description: If 1, returns only those categories which are used for modelling. If 0, returns others.
     -   name: creatorType
         in: path
         type: string
@@ -36,4 +40,5 @@ parameters:
         in: path
         type: string
         required: false
+        enum: ['US','KS','DS','LP','NK','auto']
         description: Fetch category(s) by person who created it

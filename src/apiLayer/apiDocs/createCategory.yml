@@ -1,0 +1,39 @@
+Create Category
+---
+tags:
+    -   Category Creation API
+parameters:
+    -   name: name
+        in: body
+        type: string
+        required: true
+        description: Name of the Category
+    -   name: level
+        in: body
+        type: string
+        required: true
+        enum: ['level1','level2','level3']
+        description: Level at which the category belongs
+    -   name: parentId
+        in: body
+        type: string
+        required: true
+        description: ParentId of the created category
+    -   name: usedForModel
+        in: body
+        type: integer
+        required: true
+        enum: [0,1]
+        description: If 1, the category is used for modelling, 0 otherwise
+    -   name: creatorType
+        in: body
+        type: string
+        required: truee
+        enum: ['auto','manual']
+        description: Use auto for algorithmically created category, manual otherwise
+    -   name: creatorName
+        in: body
+        type: string
+        required: true
+        enum: ['US','KS','DS','LP','NK','auto']
+        description: Initials of the creator, Eg, 'NK' or 'auto' for algorithmically created category
