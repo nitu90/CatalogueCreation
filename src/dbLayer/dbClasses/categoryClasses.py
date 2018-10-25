@@ -2,7 +2,6 @@ from mongoengine import *
 from src.dbLayer.dbConfig.config import CATEGORYCOLLECTIONNAME
 
 
-
 class Category(Document):
     meta = {
         'collection': CATEGORYCOLLECTIONNAME
