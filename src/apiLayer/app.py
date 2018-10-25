@@ -5,6 +5,7 @@ from flask import Flask, jsonify, request
 from mongoengine import connect
 from flasgger import Swagger
 from flasgger.utils import swag_from
+import numpy as np
 
 
 app = Flask(__name__)
